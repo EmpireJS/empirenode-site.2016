@@ -27,17 +27,45 @@
 
 @import "site/grayscale.less";
 
+body {
+  background: @blue;
+}
+
+a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .black-bg-cover {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .brand-heading {
   span {
     font-weight: 400;
   }
+}
+
+.navbar-custom {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.top-nav-collapse {
+    background: @red;
+    border-bottom: 3px solid white;
+  }
+}
+
+#about {
+  background-color: @blue;
 }
