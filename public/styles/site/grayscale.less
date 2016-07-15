@@ -236,16 +236,22 @@ a {
     padding-top: 100px;
 }
 
-.rfp-section {
+.cfp-section {
     width: 100%;
     padding: 50px 0;
     color: white;
-    background: url(../img/statue-liberty-banner.jpg) no-repeat center center scroll;
+    background: url(../img/statue-liberty-banner.jpg) no-repeat right center scroll;
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .cfp-section {
+    background: url(../img/statue-liberty-banner-phone.jpg) no-repeat right center scroll;
+  }
 }
 
 #map {
