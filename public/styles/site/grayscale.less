@@ -54,12 +54,22 @@ a {
     font-weight: 400;
 }
 
+
+.navbar-custom {
+  a {
+
+  }
+  &.top-nav-collapse {
+    background: @red;
+    border-bottom: 3px solid white;
+  }
+}
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid fade(white, 30%);
+    background: @red;
+    border-bottom: 3px solid white;
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: black;
     .navbar-toggle {
         color: white;
         background-color: fade(white, 20%);
@@ -77,6 +87,10 @@ a {
     }
     a {
         color: white;
+        text-decoration: none;
+        &:hover {
+          text-decoration: none;
+        }
     }
     .nav {
         li {
