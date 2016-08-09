@@ -5,8 +5,7 @@ FROM node:6.3.1
 # the container. If you don’t do this, then the process inside the container
 # will run as root, which is against security best practices and principles.
 # We also install the latest version of npm
-RUN useradd --user-group --create-home --shell /bin/false app && \
-  npm i -g supervisor
+RUN useradd --user-group --create-home --shell /bin/false app
 
 ENV HOME=/home/app
 
@@ -18,7 +17,7 @@ ENV HOME=/home/app
 # builds by only copying in what we need at this point, and copying in the rest
 # after we run npm install. This takes better advantage of docker build’s layer
 # caching.
-COPY package.json $HOME/site/
+COPY package.json npm-shrinkwrap.json $HOME/site/
 # Files copied into the container with the COPY command end up being owned by
 # root inside of the container, which means that our unprivileged app user can’t
 # read or write them, which it will not like. So, we simply chown them to app
@@ -29,11 +28,21 @@ RUN chown -R app:app $HOME/*
 USER app
 WORKDIR $HOME/site
 
-# Install npm dependencies
-RUN npm install
+# Install npm dependencies (only production for prod mode)
+RUN npm install --only=production
+
+# In production mode, we'll also want to copy over the rest of the source code
+# so it can run without mounted volumes. COPY needs to be run as root.
+USER root
+COPY . $HOME/site
+RUN chown -R app:app $HOME/*
+USER app
 
 # start the app
-CMD ["supervisor", "keystone"]
+CMD ["node", "keystone"]
 
 # expose the docker container port to the host
 EXPOSE 3000
+
+
+
