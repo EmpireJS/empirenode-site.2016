@@ -27,6 +27,8 @@
 
 @import "site/grayscale.less";
 
+@import "site/icons.less";
+
 body {
   background: @blue;
 }
@@ -62,7 +64,7 @@ a {
 
 section {
   position: relative;
-  padding: 25rem 0;
+  padding: 10rem 0;
 
   & p:last-child {
     margin-bottom: 0;
@@ -73,7 +75,7 @@ section {
   }
 
   &#location {
-    padding: 12.5rem 0 6.25rem 0;
+    padding: 10rem 0 6.25rem 0;
   }
 
   &#vote {
@@ -85,7 +87,7 @@ section {
   }
 
   @media (max-width: 768px) {
-    padding: 12.5rem 0;
+    padding: 10rem 0;
   }
 }
 
@@ -110,9 +112,35 @@ hr {
   background-color: @blue;
 }
 
+#contact {
+  background-color: @lightGrey;
+  h1, a {
+    color: @red;
+  }
+
+  p {
+    color: #000;
+  }
+}
+
 #map {
   // padding: 30rem 0;
   min-height: 50vh;
+}
+
+#organizers {
+  .thumbnail {
+    border: 10px solid @red;
+    padding: 14px;
+
+    img {
+      max-width: 240px;
+    }
+
+    h4 {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 // #kong {
