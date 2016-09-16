@@ -148,6 +148,59 @@ hr {
   }
 }
 
+.company-logo-container {
+  height: 135px;
+
+  @media (max-width: 767px) {
+    & {
+      height: 90px;
+    }
+  }
+
+  .valign-helper {
+    display: inline-block;
+    line-height: 130px;
+    height: 100%;
+    vertical-align: middle;
+
+    @media (max-width: 767px) {
+      & {
+        line-height: 90px;
+      }
+    }
+
+    img {
+      vertical-align: middle;
+      max-height: 130px;
+      display: inline-block;
+
+      @media (max-width: 767px) {
+        & {
+          max-height: 90px;
+        }
+      }
+
+      @media (min-width: 768px) {
+
+        &.company-codiscope {
+          margin-top: 25px;
+          margin-right: 70px;
+        }
+
+        &.company-nodesource {
+          margin-bottom: 20px;
+        }
+
+      }
+    }
+  }
+
+}
+
+.become-sponsor {
+  margin-top: 20px;
+}
+
 .btn-main {
   border-radius: 10px;
   font-size: 2em;
