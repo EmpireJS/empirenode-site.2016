@@ -116,7 +116,7 @@ hr {
   background-color: @blue;
 }
 
-#contact {
+#sponsor {
   background-color: @lightGrey;
   h1, a {
     color: @red;
@@ -132,7 +132,7 @@ hr {
   min-height: 50vh;
 }
 
-#organizers {
+#organizers, #speakers {
   .thumbnail {
     border: 10px solid @red;
     padding: 14px;
@@ -148,10 +148,27 @@ hr {
   }
 }
 
+.vc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 357px;
+
+  @media (max-width: 768px) {
+    height: 200px;
+    h3 {
+      align-self: flex-start;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+
 .company-logo-container {
   height: 135px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     & {
       height: 90px;
     }
@@ -163,7 +180,7 @@ hr {
     height: 100%;
     vertical-align: middle;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       & {
         line-height: 90px;
       }
@@ -174,7 +191,7 @@ hr {
       max-height: 130px;
       display: inline-block;
 
-      @media (max-width: 767px) {
+      @media (max-width: 768px) {
         & {
           max-height: 90px;
         }
