@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>empirenode</title>
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<!-- Custom Fonts -->
-		{{!-- <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> --}}
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-		<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-		<link href="/styles/site.min.css" rel="stylesheet">
-		{{!-- This file provides the default styling for the KeystoneJS Content Editor
-		- only renders when user is logged in and admin--}}
-		{{{isAdminEditorCSS user}}}
-		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-		//- Safely remove this block if you are not targeting IE8 --}}
-		<!--[if lt IE 9]>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>empirenode</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<!-- Custom Fonts -->
+	{{!--
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> --}}
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+		crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="/styles/site.min.css" rel="stylesheet"> {{!-- This file provides the default styling for the KeystoneJS Content Editor - only renders when user is logged in and
+	admin--}} {{{isAdminEditorCSS user}}} {{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries //-
+	Safely remove this block if you are not targeting IE8 --}}
+	<!--[if lt IE 9]>
 		<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
 		<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<script>
+	<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -30,505 +30,511 @@
 			ga('create', 'UA-72369471-2', 'auto');
 			ga('send', 'pageview');
 		</script>
-	</head>
-	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-		<!-- Navigation -->
-		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<!-- Navigation -->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
 					Menu <i class="fa fa-bars"></i>
 					</button>
-					<a class="navbar-brand page-scroll" href="#page-top">
-						<span class="light">Empire</span>Node
-					</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-					<ul class="nav navbar-nav">
-						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-						<li class="hidden">
-							<a href="#page-top"></a>
-						</li>
-						{{!-- {{# each navLinks}}
-						<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-							<a href="{{ href }}">{{ label }}</a>
-						</li>
-						{{/each}} --}}
-						<li>
-							<a class="page-scroll" href="#about">About</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="#speakers">Speakers!</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="#sponsor">Sponsor!</a>
-						</li>
-						<li>
-							<a class="page-scroll" target="_new" href="https://ti.to/empirejs/empirenode-2016">Get Tickets!</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="#location">Location</a>
-						</li>
-						<li>
-							<a class="page-scroll" href="#vote">Vote!</a>
-						</li>
-						{{!-- {{#if user}}
-						<li><a href="/keystone/signout">Sign Out</a></li>
-						{{else}}
-						<li><a href="/keystone/signin">Sign In</a></li>
-						{{/if}} --}}
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
+				<a class="navbar-brand page-scroll" href="#page-top">
+					<span class="light">Empire</span>Node
+				</a>
 			</div>
-			<!-- /.container -->
-		</nav>
-		<!-- Intro Header -->
-		<header class="intro">
-			<div class="black-bg-cover"></div>
-			<div class="intro-body">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<h1 class="brand-heading"><span>Empire</span>Node</h1>
-							<h2 class="intro-text">NYC's largest community run Node.js conference is back in office</h2>
-							<h3 class="intro-date"> November 7, 2016</h3>
-							<a href="https://ti.to/empirejs/empirenode-2016" target="_blank" class="btn btn-default btn-main">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				<ul class="nav navbar-nav">
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					<li class="hidden">
+						<a href="#page-top"></a>
+					</li>
+					{{!-- {{# each navLinks}}
+					<li {{#ifeq ../section key}}class="active" {{else}}{{/ifeq}}>
+						<a href="{{ href }}">{{ label }}</a>
+					</li>
+					{{/each}} --}}
+					<li>
+						<a class="page-scroll" href="#about">About</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#speakers">Speakers!</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#sponsor">Sponsor!</a>
+					</li>
+					<li>
+						<a class="page-scroll" target="_new" href="https://ti.to/empirejs/empirenode-2016">Get Tickets!</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#location">Location</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#vote">Vote!</a>
+					</li>
+					{{!-- {{#if user}}
+					<li><a href="/keystone/signout">Sign Out</a></li>
+					{{else}}
+					<li><a href="/keystone/signin">Sign In</a></li>
+					{{/if}} --}}
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!-- Intro Header -->
+	<header class="intro">
+		<div class="black-bg-cover"></div>
+		<div class="intro-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1 class="brand-heading"><span>Empire</span>Node</h1>
+						<h2 class="intro-text">NYC's largest community run Node.js conference is back in office</h2>
+						<h3 class="intro-date"> November 7, 2016</h3>
+						<a href="https://ti.to/empirejs/empirenode-2016" target="_blank" class="btn btn-default btn-main">
 								Get Tickets!
 							</a>
-							<br/>
-							<a href="#about" class="btn btn-circle page-scroll">
-								<i class="fa fa-angle-double-down animated"></i>
-							</a>
-						</div>
+						<br/>
+						<a href="#about" class="btn btn-circle page-scroll">
+							<i class="fa fa-angle-double-down animated"></i>
+						</a>
 					</div>
 				</div>
 			</div>
-		</header>
-		{{#if messages}}
-		<div id="flash-messages" class="container">
-			{{#if messages.info}}
-			<div class="alert alert-info">
-				{{{flashMessages messages.info}}}
-			</div>
-			{{/if}}
-			{{#if messages.success}}
-			<div class="alert alert-success">
-				{{{flashMessages messages.success}}}
-			</div>
-			{{/if}}
-			{{#if messages.warning}}
-			<div class="alert alert-warning">
-				{{{flashMessages messages.warning}}}
-			</div>
-			{{/if}}
-			{{#if messages.error}}
-			<div class="alert alert-danger">
-				{{{flashMessages messages.error}}}
-			</div>
-			{{/if}}
+		</div>
+	</header>
+	{{#if messages}}
+	<div id="flash-messages" class="container">
+		{{#if messages.info}}
+		<div class="alert alert-info">
+			{{{flashMessages messages.info}}}
+		</div>
+		{{/if}} {{#if messages.success}}
+		<div class="alert alert-success">
+			{{{flashMessages messages.success}}}
+		</div>
+		{{/if}} {{#if messages.warning}}
+		<div class="alert alert-warning">
+			{{{flashMessages messages.warning}}}
+		</div>
+		{{/if}} {{#if messages.error}}
+		<div class="alert alert-danger">
+			{{{flashMessages messages.error}}}
 		</div>
 		{{/if}}
-		<!-- The content block should contain the body of your template's content-->
-		{{!-- {{{body}}} --}}
+	</div>
+	{{/if}}
+	<!-- The content block should contain the body of your template's content-->
+	{{!-- {{{body}}} --}}
 
-		<section id="about" class="content-section text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<h2>The people spoke. Four more years!</h2>
-						<p>EmpireNode is a yearly, 100% community-run conference of the people, by the people, and for the people. We're back this year, presenting a platform we all know and love - the <a href="http://nodejs.org/">Node Party</a>.
-						<p>Building on <a href="http://2014.empirenode.org/">two</a> <a href="http://2014.empirenode.org/">years</a> of success, and the work of our <a href="http://empirejs.org">partners</a>, we bring you the best of what's happening in our technology community.</p>
+	<section id="about" class="content-section text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h2>The people spoke. Four more years!</h2>
+					<p>EmpireNode is a yearly, 100% community-run conference of the people, by the people, and for the people. We're back this
+						year, presenting a platform we all know and love - the <a href="http://nodejs.org/">Node Party</a>.
+						<p>Building on <a href="http://2014.empirenode.org/">two</a> <a href="http://2014.empirenode.org/">years</a> of success,
+							and the work of our <a href="http://empirejs.org">partners</a>, we bring you the best of what's happening in our technology
+							community.
+						</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<hr/>
+
+	<section id="speakers" class="content-section text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Meet the Speakers!</h1>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/3051193?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Nick Herh</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/hipsterbrown" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/hipsterbrown" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
+								<h3>Portable Distributed Systems - Using Node on "Routers"</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/1074773?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Mathew Conlen</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/mathisonian" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/mathisonian" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 vc">
+								<h3>Extending HyperTerm</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/246143?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Jamund Ferguson</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/xjamundx" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/xjamundx" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
+								<h3>Advanced Linting in Node.js with ESLint</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/502396?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Tierney Coren</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/bnb" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/bitandbang" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 vc">
+								<h3>Rocketing the Node Community Beyond the Edge</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/5778170?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Gabrielle Crevecoeur</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/gcrev93" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/nowayshecodes" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
+								<h3>Build your child their very own Node.js Frozen bot</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/1913638?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Philipp<br/>Burckhardt</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/Planeshifter" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/burckhap" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 vc">
+								<h3>Real-time machine learning with Node.js</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/9062418?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Seth Samuel</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/sethsamuel" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/sethfsamuel" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
+								<h3>How WebAssembly will change the way you write Javascript</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/2440935?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Alejandro Oviedo</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/a0viedo" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/a0viedo" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 vc">
+								<h3>Demystifying JavaScript engines</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/799038?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Justin J Moses</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/justinjmoses" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/justinjmoses" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
+								<h3>Musical composition through functional composition with streams & observables</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/387129?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Carlos Justiniano</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/cjus" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/cjus" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 vc">
+								<h3>Node Microservices using Hydra</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-xs-12 col-sm-6">
+					<div class="container-fluid">
+						<div class="row">
+
+							<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
+								<div class="thumbnail">
+									<img src="https://avatars3.githubusercontent.com/u/8670346?v=3&amp;s=240" alt="Aidan Feldman">
+									<div class="caption">
+										<h4>Sarah Sexton</h4>
+										<div class="social">
+											<ul>
+												<li><a href="https://github.com/SarahSexton" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+												<li><a href="https://twitter.com/Saelia" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
+								<h3>Getting Started with Microsoft Bot Framework</h3>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+
+	<section id="sponsor" class="content-section text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Our Sponsors!</h1>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-12 company-logo-container">
+								<span class="valign-helper"><img src="/img/capital-one.png" alt="Capital One" class="img-responsive center-block company-logo company-capital-one"></span>
+							</div>
+							<div class="col-xs-12 col-sm-6 company-logo-container">
+								<span class="valign-helper"><img src="/img/Bloomberg.png" alt="Bloomberg" class="img-responsive center-block company-logo company-bloomberg"></span>
+							</div>
+							<div class="col-xs-12 col-sm-6 company-logo-container">
+								<span class="valign-helper"><img src="/img/shutterstock.png" alt="Shutterstock" class="img-responsive center-block company-logo company-shutterstock"></span>
+							</div>
+							<div class="col-xs-12 col-sm-6 company-logo-container">
+								<span class="valign-helper"><img src="/img/strongloop-ibm.png" alt="StrongLoop - An IBM Company" class="img-responsive center-block company-logo company-strongloop"></span>
+							</div>
+							<div class="col-xs-12 col-sm-6 company-logo-container">
+								<span class="valign-helper"><img src="/img/GoDaddy.png" alt="GoDaddy" class="img-responsive center-block company-logo company-godaddy"></span>
+							</div>
+							<div class="col-xs-12 col-sm-6 company-logo-container">
+								<span class="valign-helper"><img src="/img/conde_nast_360.png" alt="Conde Nast" class="img-responsive center-block company-logo company-conde-nast"></span>
+							</div>
+							<div class="col-xs-12 col-sm-6 company-logo-container">
+								<span class="valign-helper"><img src="/img/codiscope.png" alt="Codiscope" class="img-responsive center-block company-logo company-codiscope"></span>
+							</div>
+							<div class="col-xs-12 col-sm-6 company-logo-container">
+								<span class="valign-helper"><img src="/img/nodesource.png" alt="NodeSource" class="img-responsive center-block company-logo company-nodesource"></span>
+							</div>
+							<div class="col-xs-12 col-sm-6 company-logo-container">
+								<span class="valign-helper"><img src="/img/mongodb.png" alt="MongoDB" class="img-responsive center-block company-logo company-mongodb"></span>
+							</div>
+							<div class="col-xs-12 company-logo-container">
+								<span class="valign-helper"><img src="/img/microsoft.png" alt="Microsoft" class="img-responsive center-block company-logo company-microsoft"></span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-
-		<hr/>
-
-		<section id="speakers" class="content-section text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<h1>Meet the Speakers!</h1>
-					</div>
-				</div>
-
-				<div class="row">
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/3051193?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Nick Herh</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/hipsterbrown" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/hipsterbrown" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
-									<h3>Portable Distributed Systems - Using Node on "Routers"</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/1074773?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Mathew Conlen</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/mathisonian" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/mathisonian" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 vc">
-									<h3>Extending HyperTerm</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/246143?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Jamund Ferguson</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/xjamundx" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/xjamundx" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
-									<h3>Advanced Linting in Node.js with ESLint</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/502396?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Tierney Coren</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/bnb" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/bitandbang" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 vc">
-									<h3>Rocketing the Node Community Beyond the Edge</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/5778170?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Gabrielle Crevecoeur</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/gcrev93" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/nowayshecodes" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
-									<h3>Build your child their very own Node.js Frozen bot</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/1913638?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Philipp<br/>Burckhardt</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/Planeshifter" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/burckhap" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 vc">
-									<h3>Real-time machine learning with Node.js</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/9062418?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Seth Samuel</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/sethsamuel" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/sethfsamuel" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
-									<h3>How WebAssembly will change the way you write Javascript</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/2440935?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Alejandro Oviedo</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/a0viedo" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/a0viedo" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 vc">
-									<h3>Demystifying JavaScript engines</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/799038?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Justin J Moses</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/justinjmoses" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/justinjmoses" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
-									<h3>Musical composition through functional composition with streams & observables</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/387129?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Carlos Justiniano</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/cjus" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/cjus" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 vc">
-									<h3>Node Microservices using Hydra</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="col-xs-12 col-sm-6">
-						<div class="container-fluid">
-							<div class="row">
-
-								<div class="col-xs-12 col-sm-12 col-md-7 col-md-push-5">
-									<div class="thumbnail">
-										<img src="https://avatars3.githubusercontent.com/u/8670346?v=3&amp;s=240" alt="Aidan Feldman">
-										<div class="caption">
-											<h4>Sarah Sexton</h4>
-											<div class="social">
-												<ul>
-													<li><a href="https://github.com/SarahSexton" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-													<li><a href="https://twitter.com/Saelia" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="col-xs-12 col-sm-12 col-md-5 col-md-pull-7 vc">
-									<h3>Getting Started with Microsoft Bot Framework</h3>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h1 class="become-sponsor">Become An EmpireNode Sponsor!</h1>
+					<p>EmpireNode is built, run, and sponsored by the Node community. We gather the brightest, most passionate builders and
+						creators in the Node community to connect, teach, learn, and grow. </p>
+					<p>Sponsor us. Be a part of our community.</p>
+					<h3><a href="mailto:us@empirenode.org?Subject=Sponsor Inquiry">Send us a mail at us@empirenode.org</a></h3>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-
-		<section id="sponsor" class="content-section text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<h1>Our Sponsors!</h1>
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 company-logo-container">
-									<span class="valign-helper"><img src="/img/capital-one.png" alt="Capital One" class="img-responsive center-block company-logo company-capital-one"></span>
-								</div>
-								<div class="col-xs-12 col-sm-6 company-logo-container">
-									<span class="valign-helper"><img src="/img/Bloomberg.png" alt="Bloomberg" class="img-responsive center-block company-logo company-bloomberg"></span>
-								</div>
-								<div class="col-xs-12 col-sm-6 company-logo-container">
-									<span class="valign-helper"><img src="/img/shutterstock.png" alt="Shutterstock" class="img-responsive center-block company-logo company-shutterstock"></span>
-								</div>
-								<div class="col-xs-12 col-sm-6 company-logo-container">
-									<span class="valign-helper"><img src="/img/strongloop-ibm.png" alt="StrongLoop - An IBM Company" class="img-responsive center-block company-logo company-strongloop"></span>
-								</div>
-								<div class="col-xs-12 col-sm-6 company-logo-container">
-									<span class="valign-helper"><img src="/img/GoDaddy.png" alt="GoDaddy" class="img-responsive center-block company-logo company-godaddy"></span>
-								</div>
-								<div class="col-xs-12 col-sm-6 company-logo-container">
-									<span class="valign-helper"><img src="/img/conde_nast_360.png" alt="Conde Nast" class="img-responsive center-block company-logo company-conde-nast"></span>
-								</div>
-								<div class="col-xs-12 col-sm-6 company-logo-container">
-									<span class="valign-helper"><img src="/img/codiscope.png" alt="Codiscope" class="img-responsive center-block company-logo company-codiscope"></span>
-								</div>
-								<div class="col-xs-12 col-sm-6 company-logo-container">
-									<span class="valign-helper"><img src="/img/nodesource.png" alt="NodeSource" class="img-responsive center-block company-logo company-nodesource"></span>
-								</div>
-								<div class="col-xs-12 company-logo-container">
-									<span class="valign-helper"><img src="/img/microsoft.png" alt="Microsoft" class="img-responsive center-block company-logo company-microsoft"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<h1 class="become-sponsor">Become An EmpireNode Sponsor!</h1>
-						<p>EmpireNode is built, run, and sponsored by the Node community. We gather the brightest, most passionate builders and creators in the Node community to connect, teach, learn, and grow. </p>
-						<p>Sponsor us. Be a part of our community.</p>
-						<h3><a href="mailto:us@empirenode.org?Subject=Sponsor Inquiry">Send us a mail at us@empirenode.org</a></h3>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Location Section -->
-		<section id="location" class="content-section text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2">
-						<h1>Where to Gather</h1>
-						<h3>
+	<!-- Location Section -->
+	<section id="location" class="content-section text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h1>Where to Gather</h1>
+					<h3>
 						Located in the heart of the financial district in Manhattan at the <a href="http://www.nmai.si.edu/">National Museum of the American Indian</a>
-						</h3>
-						<h4>
+					</h3>
+					<h4>
 						<a target="_new" href="http://bit.ly/2a289Bc"><span>One Bowling Green</span></br><span>New York, NY 10004</span></a>
 						</h3>
 						<p>
@@ -541,172 +547,167 @@
 							<span class="mta-bullet mta-r">R</span>
 							<span class="mta-bullet mta-j">J</span>
 							<span>and</span>
-							<span class="mta-bullet mta-z">Z</span>
-						subway trains.</p>
+							<span class="mta-bullet mta-z">Z</span> subway trains.</p>
 						<p>Discount hotel reservations are available through The Doubletree by Hilton, which is located next to the venue!</p>
-						<a class="hotel-reservation" href="http://doubletree.hilton.com/en/dt/groups/personalized/N/NYCBPDT-ENC-20161106/index.jhtml" target="_blank">Reserve a room now!</a>
-					</div>
+						<p class="hotel-reservation">Discounted hotel pricing available! Email <a href="mailto:us@empirenode.org">us@empirenode.org</a></p>
 				</div>
 			</div>
-		</section>
-		<!-- Map Section -->
-		<div id="map"></div>
-		<section id="organizers" class="content-section text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<h1>Meet the Organizers!</h1>
-					</div>
-				</div>
-				<div class="row">
-
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="thumbnail">
-							<img src="https://avatars1.githubusercontent.com/u/554847?v=3&amp;s=240" alt="Matt Walters">
-							<div class="caption">
-								<h4>Matt Walters</h4>
-								<div class="social">
-									<ul>
-										<li><a href="https://github.com/mateodelnorte" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-										<li><a href="https://twitter.com/mateodelnorte" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="thumbnail">
-							<img src="https://avatars0.githubusercontent.com/u/11859065?v=3&s=240" alt="Angelly DeJesus">
-							<div class="caption">
-								<h4>Angelly DeJesus</h4>
-								<div class="social">
-									<ul>
-										<li><a href="https://github.com/pbangelly" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-										<li><a href="https://twitter.com/BeautifulLeeya" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="thumbnail">
-							<img src="https://avatars3.githubusercontent.com/u/474827?v=3&amp;s=240" alt="Patrick Scott">
-							<div class="caption">
-								<h4>Patrick Scott</h4>
-								<div class="social">
-									<ul>
-										<li><a href="https://github.com/patrickleet" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-										<li><a href="https://twitter.com/pat_scott" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="thumbnail">
-							<img src="https://avatars3.githubusercontent.com/u/86842?v=3&amp;s=240" alt="Aidan Feldman">
-							<div class="caption">
-								<h4>Aidan Feldman</h4>
-								<div class="social">
-									<ul>
-										<li><a href="https://github.com/afeld" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-										<li><a href="https://twitter.com/aidanfeldman" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="thumbnail">
-							<img id="kirill" src="http://2014.empirejs.org/img/speakers/kirill-cherkashin.jpg" alt="Kirill Cherkashin">
-							<div class="caption">
-								<h4>Kirill Cherkashin</h4>
-								<div class="social">
-									<ul>
-										<li><a href="https://github.com/kirjs" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-										<li><a href="https://twitter.com/kirjs" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="thumbnail">
-							<img src="https://avatars0.githubusercontent.com/u/711231?v=3&s=240" alt="Paul Burt">
-							<div class="caption">
-								<h4>Paul Burt</h4>
-								<div class="social">
-									<ul>
-										<li><a href="https://github.com/pgburt" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-										<li><a href="https://twitter.com/thatmightbepaul" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
-						<div class="thumbnail">
-							<img src="https://avatars1.githubusercontent.com/u/228230?v=3&s=240" alt="Paul Burt">
-							<div class="caption">
-								<h4>Rachel White</h4>
-								<div class="social">
-									<ul>
-										<li><a href="https://github.com/rachelnicole" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
-										<li><a href="https://twitter.com/ohhoe" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
+		</div>
+	</section>
+	<!-- Map Section -->
+	<div id="map"></div>
+	<section id="organizers" class="content-section text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Meet the Organizers!</h1>
 				</div>
 			</div>
-		</section>
-		<!-- Location Section -->
-		<section id="vote" class="content-section text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-lg-4">
-						<img class="img-responsive center-block" id="kong" src="/img/kong-wants-you.jpg" alt="Kong want YOU at EmpireNode">
-					</div>
-					<div class="col-xs-12 col-lg-8">
-						<h1>Vote!</h1>
-						<p>The Presidential Elections this year are poised to be as important as any we've seen in our lifetimes.</p>
-						<p>National voting day for the Presidential Elections is on November 8th, the day following our conference. If you're traveling to EmpireNode and cannot get home in time to vote, we strongly encourage you to file an absentee ballot in your home state. </p>
-						<p><a target="_new" href="https://www.vote.org/absentee-ballot/">Absentee Ballot info for all states can be found here.</a></p>
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="https://avatars1.githubusercontent.com/u/554847?v=3&amp;s=240" alt="Matt Walters">
+						<div class="caption">
+							<h4>Matt Walters</h4>
+							<div class="social">
+								<ul>
+									<li><a href="https://github.com/mateodelnorte" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+									<li><a href="https://twitter.com/mateodelnorte" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="https://avatars0.githubusercontent.com/u/11859065?v=3&s=240" alt="Angelly DeJesus">
+						<div class="caption">
+							<h4>Angelly DeJesus</h4>
+							<div class="social">
+								<ul>
+									<li><a href="https://github.com/pbangelly" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+									<li><a href="https://twitter.com/BeautifulLeeya" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="https://avatars3.githubusercontent.com/u/474827?v=3&amp;s=240" alt="Patrick Scott">
+						<div class="caption">
+							<h4>Patrick Scott</h4>
+							<div class="social">
+								<ul>
+									<li><a href="https://github.com/patrickleet" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+									<li><a href="https://twitter.com/pat_scott" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="https://avatars3.githubusercontent.com/u/86842?v=3&amp;s=240" alt="Aidan Feldman">
+						<div class="caption">
+							<h4>Aidan Feldman</h4>
+							<div class="social">
+								<ul>
+									<li><a href="https://github.com/afeld" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+									<li><a href="https://twitter.com/aidanfeldman" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img id="kirill" src="http://2014.empirejs.org/img/speakers/kirill-cherkashin.jpg" alt="Kirill Cherkashin">
+						<div class="caption">
+							<h4>Kirill Cherkashin</h4>
+							<div class="social">
+								<ul>
+									<li><a href="https://github.com/kirjs" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+									<li><a href="https://twitter.com/kirjs" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="thumbnail">
+						<img src="https://avatars0.githubusercontent.com/u/711231?v=3&s=240" alt="Paul Burt">
+						<div class="caption">
+							<h4>Paul Burt</h4>
+							<div class="social">
+								<ul>
+									<li><a href="https://github.com/pgburt" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+									<li><a href="https://twitter.com/thatmightbepaul" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+					<div class="thumbnail">
+						<img src="https://avatars1.githubusercontent.com/u/228230?v=3&s=240" alt="Paul Burt">
+						<div class="caption">
+							<h4>Rachel White</h4>
+							<div class="social">
+								<ul>
+									<li><a href="https://github.com/rachelnicole" target="_blank"><i class="fa fa-lg fa-github"></i></a></li>
+									<li><a href="https://twitter.com/ohhoe" target="_blank"><i class="fa fa-lg fa-twitter"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</section>
-		<!-- Footer -->
-		<footer>
-			<div class="container text-center">
-				<p>Copyright &copy; EmpireNode 2016</p>
+		</div>
+	</section>
+	<!-- Location Section -->
+	<section id="vote" class="content-section text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-lg-4">
+					<img class="img-responsive center-block" id="kong" src="/img/kong-wants-you.jpg" alt="Kong want YOU at EmpireNode">
+				</div>
+				<div class="col-xs-12 col-lg-8">
+					<h1>Vote!</h1>
+					<p>The Presidential Elections this year are poised to be as important as any we've seen in our lifetimes.</p>
+					<p>National voting day for the Presidential Elections is on November 8th, the day following our conference. If you're traveling
+						to EmpireNode and cannot get home in time to vote, we strongly encourage you to file an absentee ballot in your home
+						state. </p>
+					<p><a target="_new" href="https://www.vote.org/absentee-ballot/">Absentee Ballot info for all states can be found here.</a></p>
+				</div>
 			</div>
-		</footer>
-		{{!--
-		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
-		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
-		//- you can upgrade to 2.1.4 (also bundled) for better performance.
-		--}}
-		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
-		{{!--
-		//- Customise which Bootstrap javascript files are served by including
-		//- them specifically here, instead of bootstrap-3.3.5.min.js
-		--}}
-		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
-		<!-- Plugin JavaScript -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-		<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-		<!-- Theme JavaScript -->
-		<script src="/js/grayscale.js"></script>
-		{{{isAdminEditorJS user}}}
-	</body>
+		</div>
+	</section>
+	<!-- Footer -->
+	<footer>
+		<div class="container text-center">
+			<p>Copyright &copy; EmpireNode 2016</p>
+		</div>
+	</footer>
+	{{!-- //- jQuery 1.11.3 is included by default, and required by both Bootstrap //- and the KeystoneJS Content Editor. If
+	you are not targeting IE8, //- you can upgrade to 2.1.4 (also bundled) for better performance. --}}
+	<script src="/js/jquery/jquery-1.11.3.min.js"></script> {{!-- //- Customise which Bootstrap javascript files are served
+	by including //- them specifically here, instead of bootstrap-3.3.5.min.js --}}
+	<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+	<!-- Plugin JavaScript -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+	<!-- Theme JavaScript -->
+	<script src="/js/grayscale.js"></script> {{{isAdminEditorJS user}}}
+</body>
+
 </html>
