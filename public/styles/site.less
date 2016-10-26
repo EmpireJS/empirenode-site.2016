@@ -116,7 +116,7 @@ hr {
   background-color: @blue;
 }
 
-#sponsor, #testimonial {
+#sponsor, #become-sponsor, #testimonial, #testimonials {
   background-color: @lightGrey;
   h1, a {
     color: @red;
@@ -127,10 +127,20 @@ hr {
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+    border-left: 0;
+
+    &.border {
+      border-left: 3px solid @white;
+    }
 
     footer {
       padding-bottom: 0;
       color: @red;
+    }
+
+    a.btn {
+      margin-top: 20px;
+      color: @white;
     }
   }
 
@@ -139,7 +149,32 @@ hr {
   }
 }
 
+#testimonials {
+  background-color: @blue;
+  p {
+    color: @white;
+  }
 
+  blockquote footer {
+    color: @white;
+  }
+}
+
+#diversity {
+  background-color: @lightGrey;
+  h1, h2 {
+    color: @red;
+  }
+  p {
+    color: #000;
+  }
+  ul {
+    margin-bottom: 3em;
+    li {
+      color: #000;
+    }
+  }
+}
 
 #map {
   // padding: 30rem 0;
