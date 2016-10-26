@@ -116,16 +116,30 @@ hr {
   background-color: @blue;
 }
 
-#sponsor {
+#sponsor, #testimonial {
   background-color: @lightGrey;
   h1, a {
     color: @red;
+  }
+
+  blockquote{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    footer {
+      padding-bottom: 0;
+      color: @red;
+    }
   }
 
   p {
     color: #000;
   }
 }
+
+
 
 #map {
   // padding: 30rem 0;
