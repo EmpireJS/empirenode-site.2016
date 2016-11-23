@@ -1,9 +1,10 @@
-lint: 
+lint:
 	npm lint;
 
 run: start
 
-start: 
+start:
+	PORT=$(PORT)
 	npm start;
 
 .PHONY: test
